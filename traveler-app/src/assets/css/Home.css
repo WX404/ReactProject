@@ -1,0 +1,27 @@
+
+.App-header{
+    height: 1rem;
+    background-color: #fff;
+    font-size: .4rem;
+    color: #2EB2CC;
+    text-align: left;
+    line-height: 1rem;
+    box-sizing: border-box;
+    padding: 0 .3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 3.2rem;
+    line-height: 3.2rem;
+    background: #364d79;
+    overflow: hidden;
+  }
+  
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+
+
