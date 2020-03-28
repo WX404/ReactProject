@@ -1,0 +1,74 @@
+.login{
+    margin: 0 .6rem;
+    height: 2rem;
+    box-sizing: border-box;
+    padding-top: 2rem;
+}
+.login-title{ 
+    font-size: .5rem;
+    font-weight: 500;
+    color: #777;
+}
+
+.login-not{
+    font-size: .8rem;
+    position: fixed;
+    top: .2rem;
+    right: .6rem;
+}
+.login-box{     
+    margin-top: .6rem;  
+}
+
+#login-username,#login-password{
+    border: none;
+    outline: none;
+    margin-left: .4rem;
+    color: #000;
+}
+
+.login-username,.login-password{     
+    margin: .4rem 0;
+    border-bottom: .02rem solid #ccc;
+    position: relative;
+}
+
+.login-username-tip,.login-password-tip,.login-re-password-tip{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    color: #CC3A2E
+}
+
+.login-btn{
+    width: 2rem;
+    height: .6rem;
+    border-radius: .3rem;
+    background-color: #2EB2CC;
+    margin: auto;
+    text-align: center;
+    line-height: .6rem;
+    color: #fff;
+}
+.to-register{
+    width: 2rem;
+    font-size: .24rem;
+    margin: auto;
+    border-bottom: .02rem solid #ccc;
+    margin-top: .2rem;
+}
+.login-footer{
+    position: fixed;
+    left: .6rem;
+    bottom: 0;
+    font-size: .2rem;
+    padding-bottom: .3rem;
+}
+.forget-password{
+    position: fixed;
+    right: .6rem;
+    bottom: 0;
+    font-size: .2rem;
+    padding-bottom: .3rem;
+}

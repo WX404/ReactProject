@@ -3,7 +3,12 @@ import "../assets/css/Footer.css";
 
 
 class Footer extends React.Component {
-    
+    constructor(){
+        super();
+        this.state={
+            loginStatus: false
+        }
+    }
     toHome() {
         this.props.history.push("/");
     }
@@ -17,8 +22,20 @@ class Footer extends React.Component {
         this.props.history.push("/friends");
     }
     toUser() {
+        console.log()
+        let username = sessionStorage.getItem("username")
+        if(username){
+            this.props.history.push("/user");
+        }else{
+            this.props.history.push("/login");
+        }
         
-        this.props.history.push("/user");
+        // if(!this.state.loginStatus){
+        //     this.props.history.push("/login");
+        // }else{
+        //     this.props.history.push("/user");
+        // }
+        
     }
     render() {
         return (

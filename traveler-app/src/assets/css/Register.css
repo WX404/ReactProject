@@ -1,0 +1,65 @@
+.register{
+    margin: 0 .6rem;
+    height: 2rem;
+    box-sizing: border-box;
+    padding-top: 2rem;
+}
+.register-title{
+    font-size: .5rem;
+    font-weight: 500;
+    color: #777;
+}
+
+.register-not{
+    font-size: .8rem;
+    position: fixed;
+    top: .2rem;
+    right: .6rem;
+}
+.register-box{     
+    margin-top: .6rem;  
+}
+
+#register-username,#register-password,#register-re-password{
+    border: none;
+    outline: none;
+    margin-left: .4rem;
+    color: #bbb;
+}
+
+.register-username,.register-password,.register-re-password{     
+    margin: .4rem 0;
+    border-bottom: .02rem solid #ccc;
+    position: relative;
+}
+.register-username-tip,.register-password-tip,.register-re-password-tip{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    color: #CC3A2E
+}
+.register-btn{
+    width: 2rem;
+    height: .6rem;
+    border-radius: .3rem;
+    background-color: #2EB2CC;
+    margin: auto;
+    text-align: center;
+    line-height: .6rem;
+    color: #fff;
+}
+.to-login{
+    width: 1.45rem;
+    font-size: .24rem;
+    margin: auto;
+    border-bottom: .02rem solid #ccc;
+    margin-top: .2rem;
+}
+.register-footer{
+    position: fixed;
+    left: .6rem;
+    bottom: 0;
+    font-size: .2rem;
+    padding-bottom: .3rem;
+}

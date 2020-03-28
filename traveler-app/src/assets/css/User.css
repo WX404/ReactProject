@@ -1,0 +1,48 @@
+.user{
+    margin: 0 .6rem;
+    box-sizing: border-box;
+    padding-top: .8rem;  
+}
+
+.user-option div{
+    border-bottom: .02rem solid #f7f7f7;
+}
+.user-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: .2rem;
+    border-bottom: .02rem solid #f7f7f7;
+}
+.user-nickname{
+    width: 3rem;
+    height: 1.6rem;
+}
+.user-nickname p{
+    margin-bottom: 0;
+}
+.user-nickname p:last-of-type{
+    color: #ccc;
+    font-size: .28rem;
+}
+.user-nickname p:first-of-type{
+    font-size: .8rem;
+    font-weight: bold;
+}
+.user-photo img{
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+}
+.user-option div{
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-size: .32rem;
+    width: 30%;
+}
+.user-footer{
+    position: fixed;
+    bottom: 1rem;
+    left: 2.1rem;
+    color: #ccc;
+}
