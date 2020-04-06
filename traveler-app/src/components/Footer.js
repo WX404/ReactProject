@@ -1,5 +1,12 @@
 import React from "react";
 import "../assets/css/Footer.css";
+import {
+    UserAddOutlined,
+    BankOutlined,
+    SmileOutlined,
+    EditOutlined,
+    SyncOutlined,
+  } from '@ant-design/icons';
 
 
 class Footer extends React.Component {
@@ -40,11 +47,11 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="App-footer">
-                <div onClick={this.toHome.bind(this)}>首页</div>
-                <div onClick={this.toDiscover.bind(this)}>发现</div>
-                <div onClick={this.toTravelNotes.bind(this)}>发布</div>
-                <div onClick={this.toFriends.bind(this)}>朋友</div>
-                <div onClick={this.toUser.bind(this)}>用户</div>
+                <div onClick={this.toHome.bind(this)}><BankOutlined /></div>
+                <div onClick={this.toDiscover.bind(this)}><SyncOutlined /></div>
+                <div onClick={this.toTravelNotes.bind(this)}><EditOutlined /></div>
+                <div onClick={this.toFriends.bind(this)}><UserAddOutlined /></div>
+                <div onClick={this.toUser.bind(this)}><SmileOutlined /></div>
             </div>
         )
     }

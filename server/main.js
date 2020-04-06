@@ -211,7 +211,19 @@ app.post("/getSingleimg",(req,res)=>{
 			console.log(err);return
 		}
 		if(result){
-			res.json(result[0])
+			let imgData = result
+			let sql = `select * from comment where usershare_id='${req.body.pid}'`
+			mydb.query(sql,(err,result)=>{
+				if(err){
+					console.log(err);return
+				}
+				if(result){
+					let commentData = result;
+					let newArr = imgData.concat(commentData)
+					res.json(newArr)
+				}
+			})
+			
 		}
 	})
 })

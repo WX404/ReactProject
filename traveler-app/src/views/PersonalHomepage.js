@@ -34,7 +34,7 @@ class Friends extends React.Component {
 	}
 
 	shareList() {
-		let imgList = this.state.pageData
+		let imgList = this.state.pageData.reverse()
 		let listItems = []
 		for (let i = 0; i < imgList.length; i++) {
 			listItems.push(<li key={i} className="personal-share-item" onClick={(index)=>this.toSingleImg(imgList[i].id)}>
