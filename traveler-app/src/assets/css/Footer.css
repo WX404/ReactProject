@@ -7,7 +7,8 @@
     margin-top: .8rem;
     border-top: .02rem solid #ccc;
     display: flex;  
-    background-color: #fff;    
+    background-color: #fff; 
+    z-index: 1000;    
   }
   
   .App-footer div{
