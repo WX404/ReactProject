@@ -1,0 +1,33 @@
+.pageHeader {
+    width:100%;
+    font-size:16px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+
+.changeUser {
+  text-align: center;
+  margin:0 auto;
+  margin-top:50px;
+  width: 100px;
+  height: 32px;
+  line-height:32px;
+  border-radius: 10px;
+  color: white;
+  background: orange;
+}
+.changeUser button {
+  background: orange;
+  border: 0px;
+
+}
+
+.demo-loadmore-list {
+    min-height: 350px;
+}
+
+.friends{
+    padding: 0 .6rem;
+    padding-bottom: 1.2rem;
+}

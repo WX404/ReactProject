@@ -16,7 +16,7 @@ class Register extends React.Component {
 	}
 	Register() {
 		let that = this;
-		if (that.state.username.length >= 4) {
+		if (that.state.username.length >= 2) {
 			if (that.state.password.length >= 6 && that.state.password.length <= 18) {
 				if (that.state.password === that.state.repwd) {
 					$.ajax({
@@ -28,12 +28,9 @@ class Register extends React.Component {
 							password: that.state.password
 						},
 						success(res) {
-							console.log(JSON.parse(res))
 							let data = JSON.parse(res)
 							if (data.status === 1) {
-								that.props.history.push({pathname:"/login",state:{username:that.state.username}})
-								
-								
+								that.props.history.push({pathname:"/login",state:{username:that.state.username}})								
 							} else if (data.status === 0) {
 								console.log(data.msg)
 							}
@@ -69,7 +66,7 @@ class Register extends React.Component {
 		}
 	}
 	usernameBlur() {
-		if (this.state.username.length < 4) {
+		if (this.state.username.length < 2) {
 			$(".register-username-tip").css("display", "block")
 		} else {
 			$(".register-username-tip").css("display", "none")
@@ -115,17 +112,17 @@ class Register extends React.Component {
 				<div className="register-box">
 					<div className="register-username">
 						<label htmlFor="register-username">用户名</label>
-						<input type="text" id="register-username" value={this.state.username} onChange={(event) => { this.changeName(event).bind(this) }} onFocus={this.usernameFocus.bind(this)} onBlur={this.usernameBlur.bind(this)} />
-						<p className="register-username-tip">用户名长度不小于4位</p>
+						<input type="text" id="register-username" value={this.state.username} onChange={(event) => { this.changeName(event) }} onFocus={this.usernameFocus.bind(this)} onBlur={this.usernameBlur.bind(this)} />
+						<p className="register-username-tip">用户名长度不小于2位</p>
 					</div>
 					<div className="register-password">
 						<label htmlFor="register-password">密　码</label>
-						<input type="text" id="register-password" value={this.state.password} onChange={(event) => { this.changePwd(event).bind(this) }} onFocus={this.pwdFocus.bind(this)} onBlur={this.pwdBlur.bind(this)} />
+						<input id="register-password" value={this.state.password} onChange={(event) => { this.changePwd(event) }} onFocus={this.pwdFocus.bind(this)} onBlur={this.pwdBlur.bind(this)} />
 						<p className="register-password-tip">密码需6-18位</p>
 					</div>
 					<div className="register-re-password">
 						<label htmlFor="register-re-password">确　认</label>
-						<input type="text" id="register-re-password" value={this.state.repwd} onChange={(event) => { this.rePwd(event).bind(this) }} onFocus={this.repwdFocus.bind(this)} onBlur={this.repwdBlur.bind(this)} />
+						<input id="register-re-password" value={this.state.repwd} onChange={(event) => { this.rePwd(event) }} onFocus={this.repwdFocus.bind(this)} onBlur={this.repwdBlur.bind(this)} />
 						<p className="register-re-password-tip">两次密码输入不一致</p>
 					</div>
 					<div className="register-btn" onClick={this.Register.bind(this)}>注 册</div>

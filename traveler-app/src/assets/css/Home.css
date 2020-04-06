@@ -1,27 +1,94 @@
 
 .App-header{
-    height: 1rem;
-    background-color: #fff;
-    font-size: .4rem;
-    color: #2EB2CC;
-    text-align: left;
-    line-height: 1rem;
-    box-sizing: border-box;
-    padding: 0 .3rem;
-    display: flex;
-    justify-content: space-between;
+  height: 1rem;
+  background-color: #fff;
+  font-size: .4rem;
+  color: #2EB2CC;
+  text-align: left;
+  line-height: 1rem;
+  box-sizing: border-box;
+  padding: 0 .3rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .ant-carousel .slick-slide {
-    text-align: center;
-    height: 3.2rem;
-    line-height: 3.2rem;
-    background: #364d79;
-    overflow: hidden;
-  }
-  
-.ant-carousel .slick-slide h3 {
-  color: #fff;
+  text-align: center;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  background: #364d79;
+  overflow: hidden;
 }
 
+.home-lunbotu .ant-carousel .slick-dots li button{
+  width: .2rem; 
+  height: .2rem;
+  border-radius: 50%;
+}
+.ant-carousel div{
+  width: 100%;
+  height: 3.2rem;
+}
+.ant-carousel div img{
+  width: 100%;
+  height: 3.2rem;
+}
+.home-main{
+  width: 100%;
+  padding: .4rem .4rem 1.2rem .4rem;  
+}
+
+.home-recommend{
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+
+.home-recommend ul{  
+  width: 16rem;
+  display: flex;
+  flex-wrap: nowrap; 
+  justify-content: space-between; 
+  font-size: 0;
+  padding: .2rem 0;
+}
+
+.home-recommend ul li{
+  list-style: none;
+}
+
+.home-recommend ul li img{
+  width: 2.4rem;
+  height: 1.6rem;
+  border-radius: .2rem;
+}
+
+.home-seek ul li{
+  list-style: none;
+  width: 90%;
+  height: 1.4rem;
+  overflow: hidden;
+  margin: .2rem 0;
+  border-radius: .2rem;
+  margin-left: 5%;
+}
+.home-seek ul li img{
+  width: 100%;
+  
+}
+.home-record ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.home-record ul li{
+  list-style: none;
+  width: 3.2rem;
+  height: 2.2rem;
+  overflow: hidden;
+  margin: .12rem 0;
+  border-radius: .08rem;
+}
 

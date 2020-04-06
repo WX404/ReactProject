@@ -6,7 +6,8 @@
     left: 0;      
     margin-top: .8rem;
     border-top: .02rem solid #ccc;
-    display: flex;      
+    display: flex;  
+    background-color: #fff;    
   }
   
   .App-footer div{

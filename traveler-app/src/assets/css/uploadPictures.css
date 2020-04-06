@@ -1,0 +1,60 @@
+
+.pictureswall-upload{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: .4rem;
+}
+
+.pictureswall-upload-item{
+    width: 2.06rem;
+    height: 2.06rem;    
+    border: .02rem dotted #999;
+    position: relative; 
+    padding-top: .6rem;       
+}
+
+.pictureswall-upload-tip{
+    width: 100%;
+    height: 100%;
+    line-height: 2.06rem;
+    text-align: center;
+    font-size: .36rem;
+    color: #ccc;
+    font-weight: lighter;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.pictureswall-form-input{
+    display: none;
+    font-size: .4rem;  
+}
+
+.pictureswall-upload-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.release-button{
+    width: 1.2rem;
+    height: .5rem;
+    background-color: #2EB2CC;
+    text-align: center;
+    line-height: .5rem;
+    border-radius: .25rem;
+    color: #fff;
+}
+
+.release-tip{
+    position: absolute;
+    left: 3rem;
+    top: 2.4rem;
+    border: .02rem solid #2EB2CC;
+    padding: .1rem .2rem;
+    border-radius: .4rem;
+    display: none;
+}

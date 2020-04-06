@@ -6,7 +6,7 @@ import "../src/assets/css/index.css";
 import 'antd/dist/antd.css';
 
 ReactDOM.render(
-  <App />,
+  <App/>,
   document.getElementById('root')
 );
 

@@ -7,18 +7,18 @@ class Login extends React.Component {
 		super(props);
 		this.state = {
 			username: "",
-			password: ""
+			password: "",
+			nickname: ""
 		}
 	}
-	toHome(){
+	toHome() {
 		this.props.history.push("/")
 	}
-	toRegister(){
+	toRegister() {
 		this.props.history.push("/register")
 	}
-	Login(){	
-		console.log(this.state.username,this.state.password)
-		let that = this;	
+	Login() {
+		let that = this;
 		$.ajax({
 			url: 'http://localhost:8000/login',
 			type: 'post',
@@ -27,32 +27,35 @@ class Login extends React.Component {
 				username: that.state.username,
 				password: that.state.password
 			},
-			success(res) {				
+			success(res) {
 				let data = JSON.parse(res)
 				if (data.status === 0) {
-					sessionStorage.setItem("username",that.state.username)
+					that.setState({
+						nickname: data.userInfo.nickname						
+					})
+					sessionStorage.setItem("username", that.state.username)
+					sessionStorage.setItem("nickname", that.state.nickname)					
 					//未解决路由传参问题
-					that.props.history.push("/user")					
+					that.props.history.push("/user")
 				} else if (data.status === 1) {
-					$(".login-username-tip").css("display","block")
-				} else if (data.status ===2 ){
-					$(".login-password-tip").css("display","block")
+					$(".login-username-tip").css("display", "block")
+				} else if (data.status === 2) {
+					$(".login-password-tip").css("display", "block")
 				}
 			}
 		})
-		
 	}
-	inputUsername(e){
-		this.setState({username:e.target.value})
+	inputUsername(e) {
+		this.setState({ username: e.target.value })
 	}
-	inputPassword(e){
-		this.setState({password:e.target.value})
+	inputPassword(e) {
+		this.setState({ password: e.target.value })
 	}
-	usernameFocus(){
-		$(".login-username-tip").css("display","none")
+	usernameFocus() {
+		$(".login-username-tip").css("display", "none")
 	}
-	pwdFocus(){
-		$(".login-password-tip").css("display","none")
+	pwdFocus() {
+		$(".login-password-tip").css("display", "none")
 	}
 	render() {
 		return (
@@ -62,17 +65,17 @@ class Login extends React.Component {
 				<div className="login-box">
 					<div className="login-username">
 						<label htmlFor="login-username">用户名</label>
-						<input type="text" id="login-username" onChange={(event) => { this.inputUsername(event) }} onFocus={this.usernameFocus.bind(this)}/>
+						<input type="text" id="login-username" onChange={(event) => { this.inputUsername(event) }} onFocus={this.usernameFocus.bind(this)} />
 						<div className="login-username-tip">用户名不存在</div>
 					</div>
 					<div className="login-password">
 						<label htmlFor="login-password">密　码</label>
-						<input type="text" id="login-password" onChange={(event) => { this.inputPassword(event) }} onFocus={this.pwdFocus.bind(this)}/>
+						<input type="password" id="login-password" onChange={(event) => { this.inputPassword(event) }} onFocus={this.pwdFocus.bind(this)} />
 						<div className="login-password-tip">账号或密码错误</div>
 					</div>
-					<div className="login-btn" onClick={this.Login.bind(this)}>登 录</div>					
+					<div className="login-btn" onClick={this.Login.bind(this)}>登 录</div>
 				</div>
-				<div className="to-register" onClick={this.toRegister.bind(this)}>没有账号？去注册</div>				
+				<div className="to-register" onClick={this.toRegister.bind(this)}>没有账号？去注册</div>
 				<div className="login-footer">查看用户协议</div>
 				<div className="forget-password">忘记密码？</div>
 			</div>

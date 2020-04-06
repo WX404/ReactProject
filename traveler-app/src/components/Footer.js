@@ -6,7 +6,7 @@ class Footer extends React.Component {
     constructor(){
         super();
         this.state={
-            loginStatus: false
+            
         }
     }
     toHome() {
@@ -16,13 +16,17 @@ class Footer extends React.Component {
         this.props.history.push("/discover");
     }
     toTravelNotes() {
-        this.props.history.push("/travelnotes");
+        let username = sessionStorage.getItem("username")
+        if(username){
+            this.props.history.push("/travelnotes");
+        }else{
+            this.props.history.push("/login");
+        }        
     }
     toFriends() {
         this.props.history.push("/friends");
     }
     toUser() {
-        console.log()
         let username = sessionStorage.getItem("username")
         if(username){
             this.props.history.push("/user");
@@ -30,11 +34,7 @@ class Footer extends React.Component {
             this.props.history.push("/login");
         }
         
-        // if(!this.state.loginStatus){
-        //     this.props.history.push("/login");
-        // }else{
-        //     this.props.history.push("/user");
-        // }
+        
         
     }
     render() {
