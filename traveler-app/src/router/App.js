@@ -10,6 +10,7 @@ import User from "../views/User.js"
 import HotList from "../views/HotList.js";
 import Login from "../components/Login.js";
 import Register from "../components/Register.js";
+import America from "../components/America.js"
 
 import PersonalHomepage from "../views/PersonalHomepage.js";
 
@@ -35,7 +36,8 @@ class App extends React.Component {
             <Route path="/personalhomepage/:uid" component={PersonalHomepage} />
             <Route path="/setup/:uid" component={Setup} />
             <Route path="/material" component={Material} />
-            <Route path="/singleImg/:pid" component={singleImg} />            
+            <Route path="/singleImg/:pid" component={singleImg} /> 
+            <Route path="/america" component={America} />           
           </Router>
       </div>
     );
