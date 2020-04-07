@@ -61,7 +61,6 @@ class Setup extends React.Component {
             contentType: false,
             processData: false,
             success: function (data) {
-                console.log(data)
                 $(".setup-photo-tip").css("display", "block")
                 setTimeout(() => {
                     $(".setup-photo-tip").css("display", "none")
@@ -106,8 +105,6 @@ class Setup extends React.Component {
         })
     }
     setupPassword() {
-        console.log("确认修改密码")
-        console.log(this.state.pwdValue)
         if (this.state.pwdValue.length >= 6 && this.state.pwdValue.length <= 16) {
             let that = this;
             $.ajax({
