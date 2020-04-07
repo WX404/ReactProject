@@ -282,6 +282,18 @@ app.post("/getPersonalpageData",(req,res)=>{
 		}
 	})
 })
+// 获取更多视频
+app.post("/getMorevedio",(req,res)=>{
+	let sql = `select morevedio.video_url from morevedio`
+	mydb.query(sql,(err,result)=>{
+		if(err){
+			console.log(err);return
+		}
+		if(result){
+			res.json(result)
+		}
+	})
+})
 
 app.listen(8000, function () {
   console.log("running at 8000...");
