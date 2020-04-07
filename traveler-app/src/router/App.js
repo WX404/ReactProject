@@ -10,7 +10,10 @@ import User from "../views/User.js"
 import HotList from "../views/HotList.js";
 import Login from "../components/Login.js";
 import Register from "../components/Register.js";
-import America from "../components/America.js"
+import America from "../components/America.js";
+import Han from "../components/Han.js";
+import Tai from "../components/Tai.js";
+import Tu from "../components/Tu.js";
 
 import PersonalHomepage from "../views/PersonalHomepage.js";
 
@@ -18,7 +21,7 @@ import Setup from "../components/Setup.js";
 import Material from "../components/Material";
 import singleImg from "../components/singleImg.js";
 
-const myHistory = createHashHistory();
+const myHistory = createHashHistory(); //这个必须写在所有import的后面
 
 class App extends React.Component {  
   render() {
@@ -37,7 +40,10 @@ class App extends React.Component {
             <Route path="/setup/:uid" component={Setup} />
             <Route path="/material" component={Material} />
             <Route path="/singleImg/:pid" component={singleImg} /> 
-            <Route path="/america" component={America} />           
+            <Route path="/america" component={America} />
+            <Route path="/han" component={Han} />
+            <Route path="/tai" component={Tai} />
+            <Route path="/tu" component={Tu} />           
           </Router>
       </div>
     );

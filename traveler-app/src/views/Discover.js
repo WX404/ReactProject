@@ -16,7 +16,7 @@ class Discover extends React.Component {
 			<div>
                 <Picture/>
 				<Piclist/>
-				<Vedio/>
+				<Vedio history={this.props.history}/>
 				<Footer history={this.props.history}/>
 			</div>
 		)
